@@ -118,6 +118,12 @@ body{
   border-bottom: 0.1rem solid;
   padding-bottom: 0.5rem;
 }
+.header .navi a.active {
+  color: rgb(212, 102, 24); /* same orange */
+  border-bottom: 0.1rem solid;
+  padding-bottom: 0.5rem;
+  font-weight: 600; /* optional, to highlight */
+}
 .header .icons{
   width: 33%;
   display: flex;
@@ -1201,3 +1207,27 @@ footer{
       padding: 5px;
   }
 }
+.alb_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.alb {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.alb img {
+  width: 2000px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+
+

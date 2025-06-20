@@ -55,12 +55,13 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
       <header class="header">
         <a href="kaya.php" class="logo"><img src="logo.jpg"></a>
         <nav class="navi">
-          <a href="kaya.php">Home</a>
-          <a href="about.php">About</a>
-          <a href="collections.php">Collections</a>
-          <a href="album.php">Album</a>
-          <a href="review.php">Reviews</a>
+            <a href="kaya.php" class="<?= basename($_SERVER['PHP_SELF']) == 'kaya.php' ? 'active' : '' ?>">Home</a>
+            <a href="about.php" class="<?= basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : '' ?>">About</a>
+            <a href="collections.php" class="<?= basename($_SERVER['PHP_SELF']) == 'collections.php' ? 'active' : '' ?>">Collections</a>
+            <a href="album.php" class="<?= basename($_SERVER['PHP_SELF']) == 'album.php' ? 'active' : '' ?>">Album</a>
+            <a href="review.php" class="<?= basename($_SERVER['PHP_SELF']) == 'review.php' ? 'active' : '' ?>">Reviews</a>
         </nav>
+
         <div class="icons">
           <form class="search-form" method="GET" action="search.php">
             <input type="text" name="query" id="find" placeholder="search here..." value="<?= isset($_GET['query']) ? htmlspecialchars($_GET['query']) : ''; ?>" onkeyup="search()" >
