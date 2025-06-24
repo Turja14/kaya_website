@@ -258,6 +258,7 @@ body{
   margin: 20px;
   height: 400px;
   max-width: 400px; /* For large screens */
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   box-shadow: 1px 1px 15px;
 }
@@ -272,7 +273,7 @@ body{
   margin-top: -5%;
   position : absolute;
   opacity: 0;
- visibility: hidden;
+  visibility: hidden;
   transition: opacity 1.5s ease-in-out , visibility 1.5s ease-in-out;
   z-index: 0;
 }
