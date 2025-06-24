@@ -70,7 +70,28 @@ function login(){
 }
 
 //slideshow
-var indexvalue = 0;
+let indexvalue = 0;
+const images = document.querySelectorAll(".slides img");
+
+function slideshow() {
+  // Remove "active" from all images
+  images.forEach(img => img.classList.remove("active"));
+
+  // Increment index and loop back to start if needed
+  indexvalue = (indexvalue + 1) % images.length;
+
+  // Add "active" to the current image
+  images[indexvalue].classList.add("active");
+
+  // Repeat
+  setTimeout(slideshow, 3000);
+}
+
+// Initial state
+images[0].classList.add("active");
+setTimeout(slideshow, 3000);
+
+/* var indexvalue = 0;
       function slideshow() {
       setTimeout(slideshow, 2500);
       var x;
@@ -84,7 +105,7 @@ var indexvalue = 0;
       }
       img[indexvalue - 1].style.display = "block";
       }
-      slideshow();
+      slideshow(); */
 
 //cart show
 document.addEventListener("DOMContentLoaded", function () {
